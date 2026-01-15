@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calorie App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Calorie Tracker</h1>
+    
+    <!-- Upload Section -->
+    <div class="upload-section">
+      <div class="button-group">
+        <button id="uploadBtn" class="upload-btn">Upload Photo</button>
+        <button id="cameraBtn" class="camera-btn">Take Photo</button>
+      </div>
+      <div class="upload-area">
+        <input type="file" id="uploadImage" accept="image/jpeg,image/png" style="display: none;">
+        <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+            d="M7 16V8m0 0l-4 4m4-4l4 4m6-4v8m-8-12h8m-4 4v6"/>
+        </svg>
+        <p>Selected photo will appear here</p>
+        <img id="imagePreview" class="image-preview" alt="Food Preview">
+        <video id="cameraPreview" autoplay playsinline></video>
+        <button id="captureBtn">Capture Photo</button>
+      </div>
+      <div style="display: flex; align-items: center; gap: 12px; margin-top: 12px;">
+        <button id="analyzeBtn" class="analyze-btn" disabled>Analyze Food</button>
+        <div id="spinner" class="spinner"></div>
+      </div>
+    </div>
+
+    <!-- Results Section -->
+    <div id="results" class="results"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
